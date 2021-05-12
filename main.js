@@ -5,7 +5,7 @@ var y = canvas.height;
 y = y/2;
 var rightArrowDown = false;
 var leftArrowDown = false;
-var gravityForce = 1;
+var gravityForce = 2;
     
 var speed = 1;
 setInterval(drawCircle, 10);
