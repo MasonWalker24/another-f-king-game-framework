@@ -4,6 +4,9 @@ var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
 var y = canvas.height;
 y = y/2;
+var plat1x = canvas.width/2;
+var plat1y = canvas.height;
+plat1y = y/2;
 var rightArrowDown = false;
 var leftArrowDown = false;
 var gravityForce = 2;
@@ -18,6 +21,7 @@ setInterval(update, 10);
 function update()
 {
     drawCircle();
+    drawPlat1();
     if(y + 10 >= 320)
     {
         grounded = true;
@@ -28,11 +32,11 @@ function update()
     gravity();
     text.innerHTML = y;
 }
-function drawPlatform()
+function drawPlat1()
 {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
-    ctx.rect(x, y, 200, 50);
+    ctx.rect(plat1x+100, plat1y, 200, 50);
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
