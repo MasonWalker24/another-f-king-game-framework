@@ -95,7 +95,7 @@ function jump()
 {
     //dojump = false;
     isJumping = true;
-    y = y - 7.5;
+    y = y - 7;
     loopNum++;
     if(loopNum == 20)
     {
