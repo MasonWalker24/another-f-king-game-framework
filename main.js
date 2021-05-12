@@ -41,6 +41,13 @@ function update()
     {
         collisionRight = false;
     }
+    if(x - 10 <= 0)
+    {
+        collisionLeft = true;
+    } else
+    {
+        collisionLeft = false;
+    }
     gravity();
     text.innerHTML = y;
 }
@@ -68,7 +75,10 @@ function drawCircle()
         }
     } else if(leftArrowDown == true)
     {
-        x = x - speed;
+        if(collisionLeft == false)
+        {
+            x = x - speed;
+        }
     }
 }
     
