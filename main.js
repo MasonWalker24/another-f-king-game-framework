@@ -56,7 +56,7 @@ document.addEventListener("keyup", keyUp, false);
         } else if(event.keyCode == 38)
         {
             dojump = true;
-            setInterval(jump, 50, 5);
+            setInterval(jump, 25, 5);
             isJumping = false;
         }
     }
@@ -83,8 +83,11 @@ document.addEventListener("keyup", keyUp, false);
     }
 function jump()
 {
-    //dojump = false;
-    isJumping = true;
-    y = y - 5;
+    if(grounded == true)
+    {
+        //dojump = false;
+        isJumping = true;
+        y = y - 5;
+    }
 }
 
