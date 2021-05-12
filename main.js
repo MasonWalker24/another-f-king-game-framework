@@ -22,7 +22,7 @@ function update()
         grounded = true;
     }
     gravity();
-    text.innerHTML = jump;
+    text.innerHTML = isJumping;
 }
     
 function drawCircle()
