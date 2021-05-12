@@ -9,7 +9,7 @@ var gravityForce = 2;
 var grounded = false;
     
 var speed = 1;
-setInterval(drawCircle, 10);
+setInterval(update, 10);
 
 function update()
 {
