@@ -59,10 +59,13 @@ document.addEventListener("keyup", keyUp, false);
             leftArrowDown = true;
         } else if(event.keyCode == 38)
         {
-            if(grounded == true)
+            if(isJumping == false)
             {
-                jumpInterval = setInterval(jump, 25, 5);
-                isJumping = false;
+                if(grounded == true)
+                {
+                    jumpInterval = setInterval(jump, 25, 5);
+                    isJumping = false;
+                }
             }
         }
     }
