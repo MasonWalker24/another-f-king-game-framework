@@ -14,7 +14,7 @@ setInterval(drawCircle, 10);
 function update()
 {
     drawCircle();
-    if(y + 10 >= canvas.height/2)
+    if(y + 10 <= canvas.height/2)
     {
         grounded = true;
     }
