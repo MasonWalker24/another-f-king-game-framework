@@ -97,6 +97,7 @@ function jump()
     if(loopNum == 5)
     {
         clearInterval(jumpInterval);
+        isJumping = false;
     }
 }
 
