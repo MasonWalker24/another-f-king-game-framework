@@ -19,8 +19,7 @@ var y = canvas.height;
 y = y/2;
 var rightArrowDown = false;
 var leftArrowDown = false;
-var upArrowDown = false;
-var downArrowDown = false;
+var gravityForce = 1;
     
 var speed = 1;
 setInterval(drawCircle, 10);
@@ -28,6 +27,12 @@ setInterval(drawCircle, 10);
 function update()
 {
     drawCircle();
+    if(y + 10 >= canvas.height/2)
+    {
+        grounded = true;
+    }
+    gravity();
+    
 }
     
 function drawCircle()
@@ -44,12 +49,6 @@ function drawCircle()
     } else if(leftArrowDown == true)
     {
         x = x - speed;
-    }  else if(downArrowDown == true)
-    {
-        y = y - speed;
-    }  else if(leftArrowDown == true)
-    {
-        y = y + speed;
     }
 }
     
@@ -64,12 +63,6 @@ document.addEventListener("keyup", keyUp, false);
         } else if(event.keyCode == 37)
         {
             leftArrowDown = true;
-        } else if(event.keyCode == 38)
-        {
-            upArrowDown = true;
-        } else if(event.keyCode == 39)
-        {
-            downArrowDown = true;
         }
     }
     function keyUp(event)
@@ -80,15 +73,17 @@ document.addEventListener("keyup", keyUp, false);
         } else if(event.keyCode == 37)
         {
             leftArrowDown = false;
-        } else if(event.keyCode == 38)
-        {
-            upArrowDown = false;
-        } else if(event.keyCode == 39)
-        {
-            downArrowDown = false;
         }
     }
     
+    function gravity()
+    {
+        if(grounded == false)
+        {
+            y = y - gravityForce;
+        }
+    }
+        
 </script>
 
 </body>
