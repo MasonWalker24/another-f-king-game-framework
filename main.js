@@ -42,7 +42,7 @@ function drawCircle()
     }
     if(jump == true)
     {
-        setInterval(jump, 200);
+        setInterval(jump, 200, 5);
         isJumping = false;
     }
 }
@@ -76,7 +76,7 @@ document.addEventListener("keyup", keyUp, false);
     
     function gravity()
     {
-        if(isJumping = false)
+        if(isJumping == false)
         {
             if(grounded == false)
             {
