@@ -10,6 +10,7 @@ var gravityForce = 2;
 var grounded = false;
 var dojump = false;
 var isJumping = false;
+var jumpInterval;
     
 var speed = 2;
 setInterval(update, 10);
@@ -60,7 +61,7 @@ document.addEventListener("keyup", keyUp, false);
         {
             if(grounded == true)
             {
-                setInterval(jump, 25, 5);
+                jumpInterval = setInterval(jump, 25, 5);
                 isJumping = false;
             }
         }
@@ -88,8 +89,14 @@ document.addEventListener("keyup", keyUp, false);
     }
 function jump()
 {
-        //dojump = false;
-        isJumping = true;
-        y = y - 5;
+    let loopNum = 1;
+    //dojump = false;
+    isJumping = true;
+    y = y - 5;
+    loopNum++;
+    if(loopNum == 5)
+    {
+        clearInterval(jumpInterval);
+    }
 }
 
