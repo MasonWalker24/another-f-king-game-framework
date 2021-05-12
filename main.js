@@ -57,7 +57,7 @@ document.addEventListener("keyup", keyUp, false);
         {
             jump = true;
             setInterval(jump, 200);
-        isJumping = false;
+            //isJumping = false;
         }
     }
     function keyUp(event)
