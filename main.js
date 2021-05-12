@@ -86,7 +86,7 @@ document.addEventListener("keyup", keyUp, false);
     }
 function jump()
 {
-    jump = false;
+    //jump = false;
     isJumping = true;
     y = y - 5;
 }
