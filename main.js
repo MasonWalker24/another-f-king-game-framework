@@ -97,7 +97,7 @@ function jump()
     isJumping = true;
     y = y - 5;
     loopNum++;
-    if(loopNum == 10)
+    if(loopNum == 20)
     {
         clearInterval(jumpInterval);
         isJumping = false;
