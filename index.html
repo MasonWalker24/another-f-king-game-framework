@@ -24,6 +24,7 @@ var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
+var interval = setInterval(draw, 10);
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -69,9 +70,13 @@ function draw() {
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
     }
-    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-        dy = -dy;
-    }
+    if(y + dy < ballRadius) {
+    dy = -dy;
+} else if(y + dy > canvas.height-ballRadius) {
+    alert("GAME OVER");
+    document.location.reload();
+    clearInterval(interval); // Needed for Chrome to end game
+}
     
     if(rightPressed) {
         paddleX += 7;
@@ -89,8 +94,6 @@ function draw() {
     x += dx;
     y += dy;
 }
-
-setInterval(draw, 10);
 </script>
 
 </body>
