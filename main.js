@@ -155,6 +155,7 @@ function jump()
     } else
     {
         clearInterval(jumpInterval);
+        loopNum = 0;
     }
 }
     
