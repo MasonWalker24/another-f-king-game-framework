@@ -87,17 +87,18 @@ document.addEventListener("keyup", keyUp, false);
             }
         }
     }
-let loopNum = 1;
+let loopNum = 0;
 function jump()
 {
     //dojump = false;
     isJumping = true;
     y = y - 5;
     loopNum++;
-    if(loopNum == 5)
+    if(loopNum == 10)
     {
         clearInterval(jumpInterval);
         isJumping = false;
+        loopNum = 0;
     }
 }
 
