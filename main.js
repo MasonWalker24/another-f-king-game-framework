@@ -58,7 +58,7 @@ document.addEventListener("keyup", keyUp, false);
         } else if(event.keyCode == 37)
         {
             leftArrowDown = true;
-        } else if(event.keyCode == 32)
+        } else if(event.keyCode == 38)
         {
             jump = true;
         }
