@@ -87,9 +87,9 @@ document.addEventListener("keyup", keyUp, false);
             }
         }
     }
+let loopNum = 1;
 function jump()
 {
-    let loopNum = 1;
     //dojump = false;
     isJumping = true;
     y = y - 5;
