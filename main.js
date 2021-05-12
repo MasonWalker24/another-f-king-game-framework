@@ -56,7 +56,7 @@ function update()
         collisionTop = false;
     }
     gravity();
-    text.innerHTML = y;
+    text.innerHTML = collisionTop;
 }
 function drawPlat1()
 {
@@ -148,6 +148,9 @@ function jump()
             isJumping = false;
             loopNum = 0;
         }
+    } else
+    {
+        clearInterval(jumpInterval);
     }
 }
     
