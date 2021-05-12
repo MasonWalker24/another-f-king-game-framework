@@ -4,9 +4,9 @@ var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
 var y = canvas.height;
 y = y/2;
-var plat1x = canvas.width/2;
+var plat1x = (canvas.width/2)+50;
 var plat1y = canvas.height;
-plat1y = y/2;
+plat1y = (y/2)+80;
 var rightArrowDown = false;
 var leftArrowDown = false;
 var gravityForce = 2;
@@ -47,6 +47,13 @@ function update()
     } else
     {
         collisionLeft = false;
+    }
+    if(y - 15 <= plat1y)
+    {
+        collisionTop = true;
+    } else
+    {
+        collisionTop = false;
     }
     gravity();
     text.innerHTML = y;
