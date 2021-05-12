@@ -19,6 +19,8 @@ var y = canvas.height;
 y = y/2;
 var rightArrowDown = false;
 var leftArrowDown = false;
+var upArrowDown = false;
+var downArrowDown = false;
     
 var speed = 1;
 setInterval(drawCircle, 10);
@@ -42,6 +44,12 @@ function drawCircle()
     } else if(leftArrowDown == true)
     {
         x = x - speed;
+    }  else if(downArrowDown == true)
+    {
+        y = y - speed;
+    }  else if(leftArrowDown == true)
+    {
+        y = y + speed;
     }
 }
     
@@ -56,6 +64,12 @@ document.addEventListener("keyup", keyUp, false);
         } else if(event.keyCode == 37)
         {
             leftArrowDown = true;
+        } else if(event.keyCode == 38)
+        {
+            upArrowDown = true;
+        } else if(event.keyCode == 39)
+        {
+            downArrowDown = true;
         }
     }
     function keyUp(event)
