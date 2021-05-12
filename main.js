@@ -14,7 +14,7 @@ setInterval(update, 10);
 function update()
 {
     drawCircle();
-    if(y - 10 < 0)
+    if(y - 10 < 10)
     {
         grounded = true;
     }
