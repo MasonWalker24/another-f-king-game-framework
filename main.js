@@ -2,7 +2,7 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
 var y = canvas.height;
-y = -y/2;
+y = y/2;
 var rightArrowDown = false;
 var leftArrowDown = false;
 var gravityForce = 2;
@@ -67,6 +67,6 @@ document.addEventListener("keyup", keyUp, false);
     {
         if(grounded == false)
         {
-            y = y - gravityForce;
+            y = y + gravityForce;
         }
     }
