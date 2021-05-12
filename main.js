@@ -6,6 +6,7 @@ y = y/2;
 var rightArrowDown = false;
 var leftArrowDown = false;
 var gravityForce = 2;
+var grounded = false;
     
 var speed = 1;
 setInterval(drawCircle, 10);
