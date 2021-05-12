@@ -42,7 +42,7 @@ function drawCircle()
     }
     if(jump == true)
     {
-        setInterval(jump, 200, 5);
+        setInterval(jump, 200);
         isJumping = false;
     }
 }
