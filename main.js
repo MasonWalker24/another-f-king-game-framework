@@ -20,7 +20,7 @@ function update()
         grounded = true;
     }
     gravity();
-    text.innerHTML = y;
+    //text.innerHTML = y;
 }
     
 function drawCircle()
