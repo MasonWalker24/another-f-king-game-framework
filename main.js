@@ -8,7 +8,7 @@ var rightArrowDown = false;
 var leftArrowDown = false;
 var gravityForce = 2;
 var grounded = false;
-var jump = false;
+var dojump = false;
 var isJumping = false;
     
 var speed = 2;
@@ -55,7 +55,7 @@ document.addEventListener("keyup", keyUp, false);
             leftArrowDown = true;
         } else if(event.keyCode == 38)
         {
-            jump = true;
+            dojump = true;
             jump();
             isJumping = false;
         }
@@ -83,7 +83,7 @@ document.addEventListener("keyup", keyUp, false);
     }
 function jump()
 {
-    //jump = false;
+    //dojump = false;
     isJumping = true;
     y = y - 50;
 }
