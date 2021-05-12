@@ -8,6 +8,8 @@ var rightArrowDown = false;
 var leftArrowDown = false;
 var gravityForce = 2;
 var grounded = false;
+var jump;
+var isJumping = false;
     
 var speed = 2;
 setInterval(update, 10);
@@ -38,6 +40,11 @@ function drawCircle()
     {
         x = x - speed;
     }
+    if(jump == true)
+    {
+        setInterval(jump, 200, 5);
+        isJumping = false;
+    }
 }
     
 document.addEventListener("keydown", keyDown, false);
@@ -51,6 +58,9 @@ document.addEventListener("keyup", keyUp, false);
         } else if(event.keyCode == 37)
         {
             leftArrowDown = true;
+        } else if(event.keyCode == 32)
+        {
+            jump = true;
         }
     }
     function keyUp(event)
@@ -66,8 +76,18 @@ document.addEventListener("keyup", keyUp, false);
     
     function gravity()
     {
-        if(grounded == false)
+        if(isJumping = false)
         {
-            y = y + gravityForce;
+            if(grounded == false)
+            {
+                y = y + gravityForce;
+            }
         }
     }
+function jump()
+{
+    jump = false;
+    isJumping = true;
+    y = y - 5;
+}
+
