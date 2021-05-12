@@ -48,7 +48,7 @@ function update()
     {
         collisionLeft = false;
     }
-    if(y - 30 <= plat1y)
+    if(y + 30 <= plat1y)
     {
         collisionTop = true;
         isJumping = false;
