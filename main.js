@@ -8,7 +8,7 @@ var rightArrowDown = false;
 var leftArrowDown = false;
 var gravityForce = 2;
 var grounded = false;
-var jump;
+var jump = false;
 var isJumping = false;
     
 var speed = 2;
