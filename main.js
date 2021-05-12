@@ -28,6 +28,15 @@ function update()
     gravity();
     text.innerHTML = y;
 }
+function drawPlatform()
+{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.rect(x, y, 200, 50);
+    ctx.fillStyle = "green";
+    ctx.fill();
+    ctx.closePath();
+}
     
 function drawCircle()
 {
