@@ -56,8 +56,8 @@ document.addEventListener("keyup", keyUp, false);
         } else if(event.keyCode == 38)
         {
             jump = true;
-            setInterval(jump, 200);
-            //isJumping = false;
+            jump();
+            isJumping = false;
         }
     }
     function keyUp(event)
@@ -85,6 +85,6 @@ function jump()
 {
     //jump = false;
     isJumping = true;
-    y = y - 5;
+    y = y - 50;
 }
 
