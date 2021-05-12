@@ -36,7 +36,7 @@ function update()
 function drawPlat1()
 {
     ctx.beginPath();
-    ctx.rect(plat1x+50, plat1y+75, 200, 50);
+    ctx.rect(plat1x+50, plat1y+80, 100, 30);
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
