@@ -16,7 +16,7 @@ var isJumping = false;
 var jumpInterval;
     
 var speed = 2;
-setInterval(update, 10);
+setInterval(update, 1);
 
 function update()
 {
