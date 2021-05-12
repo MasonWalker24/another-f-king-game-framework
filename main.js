@@ -14,6 +14,10 @@ var grounded = false;
 var dojump = false;
 var isJumping = false;
 var jumpInterval;
+var collisionTop = false;
+var collisionLeft = false;
+var collisionBottom = false;
+var collisionRight = false;
     
 var speed = 2;
 setInterval(update, 10);
@@ -29,6 +33,13 @@ function update()
     } else
     {
         grounded = false;
+    }
+    if(x + 10 >= 480)
+    {
+        collisionRight = true;
+    } else
+    {
+        collisionRight = false;
     }
     gravity();
     text.innerHTML = y;
@@ -51,7 +62,10 @@ function drawCircle()
     ctx.closePath();
     if(rightArrowDown == true)
     {
-        x = x + speed;
+        if(collisionRight == false)
+        {
+            x = x + speed;
+        }
     } else if(leftArrowDown == true)
     {
         x = x - speed;
@@ -105,15 +119,18 @@ document.addEventListener("keyup", keyUp, false);
 let loopNum = 0;
 function jump()
 {
-    //dojump = false;
-    isJumping = true;
-    y = y - 7;
-    loopNum++;
-    if(loopNum == 20)
+    if(collisionTop == false)
     {
-        clearInterval(jumpInterval);
-        isJumping = false;
-        loopNum = 0;
+        //dojump = false;
+        isJumping = true;
+        y = y - 7;
+        loopNum++;
+        if(loopNum == 20)
+        {
+            clearInterval(jumpInterval);
+            isJumping = false;
+            loopNum = 0;
+        }
     }
 }
     
