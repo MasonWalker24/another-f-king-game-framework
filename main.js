@@ -36,7 +36,7 @@ function drawPlat1()
 {
     //ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
-    ctx.rect(plat1x+100, plat1y, 200, 50);
+    ctx.rect(plat1x+50, plat1y-75, 200, 50);
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
