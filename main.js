@@ -50,8 +50,11 @@ function update()
     }
     if(y - 40 <= plat1y)
     {
-        collisionTop = true;
-        isJumping = false;
+        if(x - 110 >= plat1x || x + 110 <= plat1x)
+        {
+            collisionTop = true;
+            isJumping = false;
+        }
     } else
     {
         collisionTop = false;
