@@ -9,7 +9,7 @@ var leftArrowDown = false;
 var gravityForce = 2;
 var grounded = false;
     
-var speed = 1;
+var speed = 2;
 setInterval(update, 10);
 
 function update()
