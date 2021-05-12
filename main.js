@@ -22,7 +22,7 @@ function update()
         grounded = true;
     }
     gravity();
-    text.innerHTML = isJumping;
+    text.innerHTML = jump;
 }
     
 function drawCircle()
@@ -39,11 +39,6 @@ function drawCircle()
     } else if(leftArrowDown == true)
     {
         x = x - speed;
-    }
-    if(jump == true)
-    {
-        setInterval(jump, 200, 5);
-        isJumping = false;
     }
 }
     
