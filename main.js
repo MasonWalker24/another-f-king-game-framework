@@ -54,6 +54,7 @@ function update()
     } else
     {
         collisionTop = false;
+        isJumping = false;
     }
     gravity();
     text.innerHTML = collisionTop;
