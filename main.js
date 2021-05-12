@@ -1,5 +1,5 @@
 var canvas = document.getElementById("myCanvas");
-//var text = document.getElementByID("text");
+var text = document.getElementById("text");
 var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
 var y = canvas.height;
@@ -20,7 +20,7 @@ function update()
         grounded = true;
     }
     gravity();
-    //text.innerHTML = y;
+    text.innerHTML = y;
 }
     
 function drawCircle()
