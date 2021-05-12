@@ -105,3 +105,16 @@ function jump()
     }
 }
 
+function createLoop(func, time, limit)
+{
+    let counter = 0;
+    let targetInterval = setInterval(func, time);
+    let counterInterval = setInterval(function(){counter++; if(counter == limit){clearInterval(targetInterval;) clearInterval(counterInterval)}};, time);
+}
+createLoop(test, 50, 5);
+function test()
+{
+    alert("test");
+}
+    
+
