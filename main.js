@@ -20,6 +20,9 @@ function update()
     if(y + 10 >= 320)
     {
         grounded = true;
+    } else
+    {
+        grounded = false;
     }
     gravity();
     text.innerHTML = isJumping;
