@@ -51,10 +51,10 @@ function update()
     if(y - 30 <= plat1y)
     {
         collisionTop = true;
+        isJumping = false;
     } else
     {
         collisionTop = false;
-        isJumping = false;
     }
     gravity();
     text.innerHTML = collisionTop;
