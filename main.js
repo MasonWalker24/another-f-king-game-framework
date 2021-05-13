@@ -123,7 +123,7 @@ document.addEventListener("keyup", keyUp, false);
             {
                 if(grounded == true)
                 {
-                    jumpInterval = setInterval(jump, 17, 7);
+                    jumpInterval = setInterval(jump, 17);
                     isJumping = false;
                 }
             }
@@ -159,7 +159,7 @@ function jump()
         isJumping = true;
         y = y - 5;
         loopNum++;
-        if(loopNum == 20)
+        if(loopNum == 28)
         {
             clearInterval(jumpInterval);
             isJumping = false;
