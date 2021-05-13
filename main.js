@@ -19,6 +19,7 @@ var jumpInterval;
 var collisionTop = false;
 var collisionLeft = false;
 var collisionRight = false;
+var collisionBottom = false;
 var playerRadius = 10;
     
 var speed = 2;
@@ -34,7 +35,13 @@ function update()
         grounded = true;
     } else
     {
-        grounded = false;
+        if(collisionBottom == true)
+        {
+            grounded = true;
+        } else
+        {
+            grounded = false;
+        }
     }
     if(x + 10 >= 480)
     {
@@ -86,7 +93,7 @@ function update()
     {
         if(x + playerRadius - 1 >= plat1x && x - (plat1width + playerRadius - 1) <= plat1x)
         {
-            grounded = true;
+            collisionBottom = true;
         }
     }
     gravity();
