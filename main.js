@@ -135,6 +135,7 @@ function drawCircle()
     {
         y = y - 1.5;
         moveUp = false;
+        grounded = true;
     }
 }
     
