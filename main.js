@@ -98,7 +98,7 @@ function update()
         }
     }
     gravity();
-    text.innerHTML = collisionBottom;
+    text.innerHTML = grounded;
 }
 function drawPlat1()
 {
