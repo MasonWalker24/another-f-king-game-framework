@@ -7,6 +7,8 @@ y = y/2;
 var plat1x = (canvas.width/2)+50;
 var plat1y = canvas.height;
 plat1y = (y/2)+80;
+var plat1width = 100;
+var plat1height = 30;
 var rightArrowDown = false;
 var leftArrowDown = false;
 var gravityForce = 2;
@@ -18,6 +20,7 @@ var collisionTop = false;
 var collisionLeft = false;
 var collisionBottom = false;
 var collisionRight = false;
+var playerRadius = 10;
     
 var speed = 2;
 setInterval(update, 10);
@@ -48,9 +51,9 @@ function update()
     {
         collisionLeft = false;
     }
-    if(y - 40 <= plat1y)
+    if(y - (plat1height - playerRadius) <= plat1y)
     {
-        if(x + 10 >= plat1x && x - 110 <= plat1x)
+        if(x + playerRadius >= plat1x && x - (plat1width + playerRadius) <= plat1x)
         {
             collisionTop = true;
             isJumping = false;
@@ -65,7 +68,7 @@ function update()
 function drawPlat1()
 {
     ctx.beginPath();
-    ctx.rect(plat1x, plat1y, 100, 30);
+    ctx.rect(plat1x, plat1y, plat1width, plat1height);
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
@@ -74,7 +77,7 @@ function drawPlat1()
 function drawCircle()
 {
     ctx.beginPath();
-    ctx.arc(x, y, 10, 0, 2 * Math.PI);
+    ctx.arc(x, y, circleRadius, 0, 2 * Math.PI);
     ctx.fillStyle = "blue";
     ctx.fill();
     ctx.closePath();
