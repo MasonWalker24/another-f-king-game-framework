@@ -133,7 +133,7 @@ function drawCircle()
     }
     if(moveUp == true)
     {
-        y = y + 1.5;
+        y = y - 1.5;
         moveUp = false;
     }
 }
