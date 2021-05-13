@@ -21,6 +21,7 @@ var collisionLeft = false;
 var collisionRight = false;
 var collisionBottom = false;
 var playerRadius = 10;
+var moveUp = false;
     
 var speed = 2;
 setInterval(update, 10);
@@ -92,6 +93,7 @@ function update()
         {
             collisionBottom = true;
             grounded = true;
+            moveUp = true;
         } else
         {
             collisionBottom = false;
@@ -129,9 +131,10 @@ function drawCircle()
             x = x - speed;
         }
     }
-    if(collisionBottom == true)
+    if(moveUp == true)
     {
-     y = y + 1.5;   
+        y = y + 1.5;
+        moveUp = false;
     }
 }
     
