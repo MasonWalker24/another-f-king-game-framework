@@ -62,16 +62,6 @@ function update()
     {
         collisionTop = false;
     }
-    if(x + playerRadius >= plat1x && x - (plat1width + playerRadius - 1) <= play1x)
-    {
-        if(y - (plat1height + playerRadius) <= plat1y && y + (playerRadius) >= plat1y)
-        {
-            collisionRight = true;
-        }
-    } else
-    {
-        collisionRight = false;
-    }
     gravity();
     text.innerHTML = collisionTop;
 }
