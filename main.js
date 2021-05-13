@@ -123,7 +123,7 @@ document.addEventListener("keyup", keyUp, false);
             {
                 if(grounded == true)
                 {
-                    jumpInterval = setInterval(jump, 18, 5);
+                    jumpInterval = setInterval(jump, 17, 7);
                     isJumping = false;
                 }
             }
