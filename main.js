@@ -62,7 +62,7 @@ function update()
     {
         collisionTop = false;
     }
-    if(x + playerRadius >= plat1x)
+    if(x + playerRadius >= plat1x && x - playerRadius <= plat1x + plat1width)
     {
         if(y - (plat1height + playerRadius) <= plat1y && y + (playerRadius) >= plat1y)
         {
