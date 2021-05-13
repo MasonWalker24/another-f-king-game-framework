@@ -66,12 +66,11 @@ function update()
     {
         if(y - (plat1height + playerRadius) <= plat1y && y + (playerRadius) >= plat1y)
         {
-            collisionTop = true;
-            isJumping = false;
+            collisionRight = true;
         }
     } else
     {
-        collisionTop = false;
+        collisionRight = false;
     }
     gravity();
     text.innerHTML = collisionTop;
