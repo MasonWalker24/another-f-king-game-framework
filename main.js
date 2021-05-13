@@ -88,9 +88,6 @@ function update()
         {
             grounded = true;
         }
-    } else
-    {
-        collisionTop = false;
     }
     gravity();
     text.innerHTML = collisionTop;
