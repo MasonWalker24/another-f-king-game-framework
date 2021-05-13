@@ -166,14 +166,17 @@ document.addEventListener("keyup", keyUp, false);
     
     function gravity()
     {
-        if(isJumping == false)
+        if(collisionBottom == false)
         {
-            if(grounded == false)
+            if(isJumping == false)
             {
-                y = y + gravityForce;
+                if(grounded == false)
+                {
+                    y = y + gravityForce;
+                }
             }
         }
-    }
+     }
 let loopNum = 0;
 function jump()
 {
