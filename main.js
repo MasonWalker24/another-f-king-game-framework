@@ -56,6 +56,7 @@ function update()
         {
             collisionTop = true;
             isJumping = false;
+            grounded = false;
         }
     } else
     {
