@@ -70,7 +70,7 @@ function update()
         }
     } else
     {
-        collisionRight = false;
+        //collisionRight = false;
     }
     gravity();
     text.innerHTML = collisionTop;
