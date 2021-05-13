@@ -86,7 +86,7 @@ function update()
             collisionLeft = true;
         }
     }
-    if(y + (playerRadius*2 - 1.5) <= plat1y + plat1height && y - (playerRadius*2 - 1.5) >=  plat1y - plat1height)
+    if(y + (playerRadius*2) <= plat1y + plat1height && y - (playerRadius*2) >=  plat1y - plat1height)
     {
         if(x + playerRadius - 1 >= plat1x && x - (plat1width + playerRadius - 1) <= plat1x)
         {
@@ -98,7 +98,7 @@ function update()
         }
     }
     gravity();
-    text.innerHTML = grounded;
+    text.innerHTML = collisionTop;
 }
 function drawPlat1()
 {
@@ -128,6 +128,10 @@ function drawCircle()
         {
             x = x - speed;
         }
+    }
+    if(collisionBottom == true)
+    {
+     y = y + 1.5;   
     }
 }
     
