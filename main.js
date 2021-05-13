@@ -94,6 +94,9 @@ function update()
         if(x + playerRadius - 1 >= plat1x && x - (plat1width + playerRadius - 1) <= plat1x)
         {
             collisionBottom = true;
+        } else
+        {
+            collisionBottom = false;
         }
     }
     gravity();
