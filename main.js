@@ -18,7 +18,6 @@ var isJumping = false;
 var jumpInterval;
 var collisionTop = false;
 var collisionLeft = false;
-var collisionBottom = false;
 var collisionRight = false;
 var playerRadius = 10;
     
@@ -71,6 +70,16 @@ function update()
     } else
     {
         collisionRight = false;
+    }
+    if(x - playerRadius >= plat1x)
+    {
+        if(y - (plat1height + playerRadius) <= plat1y && y + (playerRadius) >= plat1y)
+        {
+            collisionLeft = true;
+        }
+    } else
+    {
+        collisionLeft = false;
     }
     gravity();
     text.innerHTML = collisionTop;
