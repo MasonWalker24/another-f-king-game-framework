@@ -59,7 +59,7 @@ function update()
     }
     if(y - (plat1height + playerRadius) <= plat1y)
     {
-        if(x + playerRadius + 3 >= plat1x && x - (plat1width + playerRadius + 3) <= plat1x)
+        if(x + playerRadius - 1 >= plat1x && x - (plat1width + playerRadius - 1) <= plat1x)
         {
             collisionTop = true;
             isJumping = false;
@@ -86,7 +86,7 @@ function update()
             collisionLeft = true;
         }
     }
-    if(y + (playerRadius*2 + 1) <= plat1y + plat1height && y - (playerRadius*2 + 1) >=  plat1y - plat1height)
+    if(y + (playerRadius*2 - 1) <= plat1y + plat1height && y - (playerRadius*2 - 1) >=  plat1y - plat1height)
     {
         if(x + playerRadius - 1 >= plat1x && x - (plat1width + playerRadius - 1) <= plat1x)
         {
