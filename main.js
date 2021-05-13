@@ -82,6 +82,16 @@ function update()
     {
         //collisionRight = false;
     }
+    if(y - (plat1height + playerRadius) >= plat1y && y + (plat1height + playerRadius) <= plat1y)
+    {
+        if(x + playerRadius - 1 >= plat1x && x - (plat1width + playerRadius - 1) <= plat1x)
+        {
+            grounded = true;
+        }
+    } else
+    {
+        collisionTop = false;
+    }
     gravity();
     text.innerHTML = collisionTop;
 }
