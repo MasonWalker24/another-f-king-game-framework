@@ -51,9 +51,9 @@ function update()
     {
         collisionLeft = false;
     }
-    if(y - (30 - playerRadius) <= plat1y)
+    if(y - (plat1height - playerRadius) <= plat1y)
     {
-        if(x + playerRadius >= plat1x && x - (100 + playerRadius) <= plat1x)
+        if(x + playerRadius >= plat1x && x - (plat1width + playerRadius) <= plat1x)
         {
             collisionTop = true;
             isJumping = false;
@@ -68,7 +68,7 @@ function update()
 function drawPlat1()
 {
     ctx.beginPath();
-    ctx.rect(plat1x, plat1y, 100, 30);
+    ctx.rect(plat1x, plat1y, plat1width, plat1height);
     ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
@@ -77,7 +77,7 @@ function drawPlat1()
 function drawCircle()
 {
     ctx.beginPath();
-    ctx.arc(x, y, circleRadius, 0, 2 * Math.PI);
+    ctx.arc(x, y, playerRadius, 0, 2 * Math.PI);
     ctx.fillStyle = "blue";
     ctx.fill();
     ctx.closePath();
