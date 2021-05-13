@@ -180,6 +180,7 @@ function jump()
     if(collisionTop == false)
     {
         //dojump = false;
+        grounded = false;
         isJumping = true;
         y = y - 5;
         loopNum++;
