@@ -96,9 +96,10 @@ function gravity()
 {
     if(!grounded)
     {
-        player.y = player.y + 1;   
+        player.y = player.y + 2;   
     }
 }
+
 function hitDetection()
 {
     if(player.y >= canvas.height - player.r)
