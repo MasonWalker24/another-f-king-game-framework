@@ -8,6 +8,7 @@ function update()
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPlayer(player.x, player.y, player.r);
 }
+//drawing gameObjects
 
 function drawPlayer(playerx, playery, radius)
 {
@@ -16,4 +17,38 @@ function drawPlayer(playerx, playery, radius)
     ctx.fillStyle = "blue";
     ctx.fill();
     ctx.closePath();
+}
+
+//movement code
+var rightArrowDown = false;
+var leftArrowDown = false;
+document.addEventListener("keydown", detectKey, false);
+document.addEventListener("keyup", detectKeyUp, false);
+
+function detectKey(event)
+{
+    var keyCode = event.keyCode;
+    
+    if(keyCode == 39)
+    {
+        rightArrowDown = true;
+    }
+    if(keyCode == 37)
+    {
+        leftArrowDown = true;
+    }
+}
+
+function detectKeyUp(event)
+{
+    var keyCodeUp = event.keyCode;
+    
+    if(keyCodeUp == 39)
+    {
+        rightArrowDown = false;
+    }
+    if(keyCodeUp == 37)
+    {
+        leftArrowDown = false;
+    }
 }
