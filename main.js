@@ -1,11 +1,12 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
+var player = {x: 240, y: 160, r: 10};
 setInterval(update, 10);
 
 function update()
 {
     //ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawPlayer(240, 160, 10);
+    drawPlayer(player.x, player.y, player.r);
     //test();
 }
 
