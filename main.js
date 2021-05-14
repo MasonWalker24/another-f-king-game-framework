@@ -4,6 +4,7 @@ var player = {x: 240, y: 160, r: 10};
 var plat1 = {x: 380, y: 260, w: 100, h: 30};
 var testText = document.getElementById("text");
 setInterval(update, 10);
+setInterval(hitDetection, 10);
 
 function update()
 {
