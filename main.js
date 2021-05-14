@@ -9,6 +9,7 @@ function update()
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPlayer(player.x, player.y, player.r);
     testText.innerHTML = rightArrowDown;
+    movement();
 }
 //drawing gameObjects
 
@@ -54,4 +55,14 @@ function detectKeyUp(event)
         leftArrowDown = false;
     }
 }
-text.innerHTML = keyCode;
+function movement()
+{
+    if(rightArrowDown)
+    {
+        player.x = player.x + 2;
+    }
+    if(leftArrowDown)
+    {
+        player.x = player.x - 2;
+    }
+}
