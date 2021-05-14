@@ -9,7 +9,9 @@ function update()
 {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPlayer(player.x, player.y, player.r);
+    //plat1
     drawRect(plat1.x, plat1.y, plat1.w, plat1.h);
+    //plat2
     testText.innerHTML = rightArrowDown;
     movement();
 }
@@ -19,7 +21,7 @@ function drawRect(rectx, recty, rectw, recth)
 {
     ctx.beginPath();
     ctx.rect(rectx, recty, rectw, recth);
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
 }
@@ -27,7 +29,7 @@ function drawPlayer(playerx, playery, radius)
 {
     ctx.beginPath();
     ctx.arc(playerx, playery, radius, 0, 2 * Math.PI, false);
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "blue";
     ctx.fill();
     ctx.closePath();
 }
