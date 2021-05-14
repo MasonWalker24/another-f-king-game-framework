@@ -53,4 +53,4 @@ function detectKeyUp(event)
         leftArrowDown = false;
     }
 }
-text.innerHTML = rightArrowDown;
+text.innerHTML = keyCode;
