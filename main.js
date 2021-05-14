@@ -1,6 +1,7 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var player = {x: 240, y: 160, r: 10};
+var testText = document.getElementById("text");
 setInterval(update, 10);
 
 function update()
@@ -52,3 +53,4 @@ function detectKeyUp(event)
         leftArrowDown = false;
     }
 }
+text.innerHTML = rightArrowDown;
