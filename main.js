@@ -58,47 +58,6 @@ function update()
     {
         collisionLeft = false;
     }
-    if(y - (plat1height + playerRadius) <= plat1y)
-    {
-        if(x + playerRadius - 1 >= plat1x && x - (plat1width + playerRadius - 1) <= plat1x)
-        {
-            collisionTop = true;
-            isJumping = false;
-            grounded = false;
-        }
-    } else
-    {
-        collisionTop = false;
-    }
-    if(x + playerRadius >= plat1x && x - playerRadius <= plat1x + plat1width)
-    {
-        if(y - (plat1height + playerRadius) <= plat1y && y + (playerRadius) >= plat1y)
-        {
-            collisionRight = true;
-        }
-    } else
-    {
-        //collisionRight = false;
-    }
-    if(x - playerRadius <= plat1x + plat1width && x + playerRadius >= plat1x + plat1width)
-    {
-        if(y - (plat1height + playerRadius) <= plat1y && y + (playerRadius) >= plat1y)
-        {
-            collisionLeft = true;
-        }
-    }
-    if(y + (playerRadius*2) <= plat1y + plat1height && y - (playerRadius*2) >=  plat1y - plat1height)
-    {
-        if(x + playerRadius - 1 >= plat1x && x - (plat1width + playerRadius - 1) <= plat1x)
-        {
-            collisionBottom = true;
-            grounded = true;
-            moveUp = true;
-        } else
-        {
-            collisionBottom = false;
-        }
-    }
     gravity();
     text.innerHTML = collisionTop;
 }
