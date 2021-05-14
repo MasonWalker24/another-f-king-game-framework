@@ -14,6 +14,7 @@ function update()
     //plat2
     testText.innerHTML = rightArrowDown;
     movement();
+    gravity();
 }
 //drawing gameObjects
 
@@ -77,4 +78,15 @@ function movement()
     {
         player.x = player.x - 2;
     }
+}
+
+//gravity and hit detection
+
+function gravity()
+{
+  player.y = player.y + 1;   
+}
+function hitDetection()
+{
+    
 }
