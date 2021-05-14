@@ -5,11 +5,11 @@ setInterval(update, 10);
 function update()
 {
     //ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //drawPlayer(canvas.width/2, canvas.height/2, 10);
-    test();
+    drawPlayer(240, 160, 10);
+    //test();
 }
 
-function drawPlayer(playerx, playery, radius)
+function drawPlayer(var playerx, var playery, var radius)
 {
     ctx.beginPath();
     ctx.arc(playerx, playery, radius, 0, 2*Math.PI, false);
