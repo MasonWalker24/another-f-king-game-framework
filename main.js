@@ -14,6 +14,6 @@ function drawPlayer(playerx, playery, radius)
     ctx.arc(playerx, playery, radius, 0, 2*Math.PI);
     ctx.fillStyle("blue");
     ctx.fill();
-    ctx.endPath();
+    ctx.closePath();
 }
 
