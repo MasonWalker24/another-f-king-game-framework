@@ -9,10 +9,10 @@ function update()
     //test();
 }
 
-function drawPlayer(var playerx, var playery, var radius)
+function drawPlayer(playerx, playery, radius)
 {
     ctx.beginPath();
-    ctx.arc(playerx, playery, radius, 0, 2*Math.PI, false);
+    ctx.arc(playerx, playery, radius, 0, 2 * Math.PI, false);
     ctx.fillStyle = "blue";
     ctx.fill();
     ctx.closePath();
