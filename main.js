@@ -8,6 +8,7 @@ function update()
 {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPlayer(player.x, player.y, player.r);
+    testText.innerHTML = rightArrowDown;
 }
 //drawing gameObjects
 
