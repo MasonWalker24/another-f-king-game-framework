@@ -73,16 +73,23 @@ function movement()
 {
     if(rightArrowDown)
     {
-        player.x = player.x + 2;
+        if(!collideRight)
+        {
+            player.x = player.x + 2;
+        }
     }
     if(leftArrowDown)
     {
-        player.x = player.x - 2;
+        if(!collideLeft)
+        {
+            player.x = player.x - 2;
+        }
     }
 }
 
 //gravity and hit detection
-
+var collideLeft = false;
+var collideRight = false;
 var grounded = false;
 
 function gravity()
@@ -100,5 +107,19 @@ function hitDetection()
     } else
     {
         grounded = false;
+    }
+    if(player.x >= canvas.width - player.r)
+    {
+        collideRight = true;
+    } else
+    {
+        collideRight = false;
+    }
+    if(player.x <= 0 + player.r)
+    {
+        collideLeft = true;
+    } else
+    {
+        collideLeft = false;
     }
 }
