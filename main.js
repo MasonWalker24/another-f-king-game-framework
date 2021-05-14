@@ -12,7 +12,7 @@ function update()
     //plat1
     drawRect(plat1.x, plat1.y, plat1.w, plat1.h);
     //plat2
-    testText.innerHTML = rightArrowDown;
+    testText.innerHTML = grounded;
     movement();
     gravity();
 }
@@ -93,7 +93,7 @@ function gravity()
 }
 function hitDetection()
 {
-    if(player.y >= canvas.height)
+    if(player.y >= canvas.height - player.r)
     {
         grounded = true;
     } else
