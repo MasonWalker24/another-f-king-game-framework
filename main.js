@@ -13,6 +13,7 @@ function drawPlayer(playerx, playery, radius)
     ctx.beginPath();
     ctx.arc(playerx, playery, radius, 0, 2*Math.PI);
     ctx.fillStyle("blue");
+    ctx.fill();
     ctx.endPath();
 }
 
