@@ -25,3 +25,4 @@ function test()
     ctx.fillStyle = "blue";
     ctx.fill();
     ctx.closePath();
+}
