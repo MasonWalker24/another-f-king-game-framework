@@ -82,11 +82,22 @@ function movement()
 
 //gravity and hit detection
 
+var grounded = false;
+
 function gravity()
 {
-  player.y = player.y + 1;   
+    if(!grounded)
+    {
+        player.y = player.y + 1;   
+    }
 }
 function hitDetection()
 {
-    
+    if(player.y >= canvas.height)
+    {
+        grounded = true;
+    } else
+    {
+        grounded = false;
+    }
 }
