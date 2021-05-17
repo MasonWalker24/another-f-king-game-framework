@@ -1,6 +1,6 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var player = {x: 240, y: 160, r: 10};
+var player = {x: 240, y: 160, r: 10, vx: 0};
 var plat1 = {x: 380, y: 260, w: 100, h: 30};
 var testText = document.getElementById("text");
 setInterval(update, 10);
@@ -39,8 +39,6 @@ function drawPlayer(playerx, playery, radius)
 //movement code
 var rightArrowDown = false;
 var leftArrowDown = false;
-var velocityX = 0;
-var velocityY = 0;
 document.addEventListener("keydown", detectKey, false);
 document.addEventListener("keyup", detectKeyUp, false);
 
@@ -65,30 +63,30 @@ function detectKeyUp(event)
     if(keyCodeUp == 39)
     {
         rightArrowDown = false;
-            let newInt = setInterval(function(){if(velocityX >= 0){velocityX = velocityX - 0.05;} else {clearInterval(newInt);}}, 10);
+            let newInt = setInterval(function(){if(player.vx >= 0){player.vx = player.vx - 0.05;} else {clearInterval(newInt);}}, 10);
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
-        let newInt = setInterval(function(){if(velocityX <= 0){velocityX = velocityX + 0.05;} else {clearInterval(newInt);}}, 10);
+        let newInt = setInterval(function(){if(player.vx <= 0){player.vx = velocityX + 0.05;} else {clearInterval(newInt);}}, 10);
     }
 }
 function movement()
 {
     if(rightArrowDown)
     {
-        if(velocityX < 2)
+        if(player.vx < 2)
             {
-                velocityX = velocityX + 0.05;
+                player.vx = player.vx + 0.05;
             }
     }
     if(leftArrowDown)
     {
         if(!collideLeft)
         {
-            if(velocityX > -2)
+            if(player.vx > -2)
             {
-                velocityX = velocityX - 0.05;
+                player.vx = player.vx - 0.05;
             }
         }
     }
