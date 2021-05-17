@@ -13,7 +13,7 @@ function update()
     //plat1
     drawRect(plat1.x, plat1.y, plat1.w, plat1.h);
     //plat2
-    testText.innerHTML = veloXCounter + "." + counter;
+    testText.innerHTML = veloXCounter + "." + decelCounter;
     movement();
     player.vy = 0;
     gravity();
@@ -65,14 +65,14 @@ function detectKeyUp(event)
     if(keyCodeUp == 39)
     {
         rightArrowDown = false;
-        let counter = 0;
-            let newInt = setInterval(function(){if(player.vx > 0){player.vx = player.vx - 0.05; counter++; if(counter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
+        let decelCounter = 0;
+            let newInt = setInterval(function(){if(player.vx > 0){player.vx = player.vx - 0.05; decelCounter++; if(decelCounter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
-        let counter = 0;
-        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.05; counter++; if(counter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
+        let decelCounter = 0;
+        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.05; decelCounter++; if(decelCounter == veloXCounter){clearInterval(newInt); decelCounter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
     }
 }
 function movement()
