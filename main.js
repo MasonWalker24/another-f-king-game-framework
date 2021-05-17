@@ -90,7 +90,7 @@ function movement()
             }
         }
     }
-    player.x = player.x + velocityX;
+    player.x = player.x + player.vx;
 }
 
 //gravity and hit detection
