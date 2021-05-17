@@ -41,6 +41,7 @@ function drawPlayer(playerx, playery, radius)
 var rightArrowDown = false;
 var leftArrowDown = false;
 var veloXCounter = 0;
+var decelCounter;
 document.addEventListener("keydown", detectKey, false);
 document.addEventListener("keyup", detectKeyUp, false);
 
@@ -65,13 +66,13 @@ function detectKeyUp(event)
     if(keyCodeUp == 39)
     {
         rightArrowDown = false;
-        let decelCounter = 0;
+        decelCounter = 0;
             let newInt = setInterval(function(){if(player.vx > 0){player.vx = player.vx - 0.05; decelCounter++; if(decelCounter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
-        let decelCounter = 0;
+        decelCounter = 0;
         let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.05; decelCounter++; if(decelCounter == veloXCounter){clearInterval(newInt); decelCounter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
     }
 }
