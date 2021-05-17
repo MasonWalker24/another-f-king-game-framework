@@ -1,6 +1,6 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var player = {x: 240, y: 160, r: 10, vx: 0};
+var player = {x: 240, y: 160, r: 10, vx: 0, vy: 0};
 var plat1 = {x: 380, y: 260, w: 100, h: 30};
 var testText = document.getElementById("text");
 setInterval(update, 10);
@@ -102,7 +102,8 @@ function gravity()
 {
     if(!grounded)
     {
-        player.y = player.y + 2;   
+        player.vy = 2;
+        player.y = player.y + player.vy;   
     }
 }
 
