@@ -39,8 +39,8 @@ function drawPlayer(playerx, playery, radius)
 //movement code
 var rightArrowDown = false;
 var leftArrowDown = false;
-var velocityX
-var velocityY
+var velocityX = 0;
+var velocityY = 0;
 document.addEventListener("keydown", detectKey, false);
 document.addEventListener("keyup", detectKeyUp, false);
 
