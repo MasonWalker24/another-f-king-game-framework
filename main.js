@@ -69,7 +69,7 @@ function detectKeyUp(event)
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
-        let newInt = setInterval(function(){if(player.vx <= 0){player.vx = player.vx + 0.05;} else {clearInterval(newInt);}}, 12);
+        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.05;} else {clearInterval(newInt);}}, 12);
     }
 }
 function movement()
