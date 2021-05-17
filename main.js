@@ -65,24 +65,12 @@ function detectKeyUp(event)
     if(keyCodeUp == 39)
     {
         rightArrowDown = false;
-        if(velocityX > 0)
-        {
-            let newInt = setInterval(function(){velocityX = velocityX - 0.08;}, 10);
-        } else 
-        {
-            clearInterval(newInt);
-        }
+            let newInt = setInterval(function(){if(velocityX > 0){velocityX = velocityX - 0.08;} else {clearInterval(newInt);}}, 10);
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
-        if(velocityX < 0)
-        {
-            let newInt = setInterval(function(){velocityX = velocityX + 0.08;}, 10);
-        } else 
-        {
-            clearInterval(newInt);
-        }
+        let newInt = setInterval(function(){if(velocityX < 0){velocityX = velocityX + 0.08;} else {clearInterval(newInt);}}, 10);
     }
 }
 function movement()
