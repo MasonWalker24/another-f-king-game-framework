@@ -15,6 +15,7 @@ function update()
     //plat2
     testText.innerHTML = grounded;
     movement();
+    player.vy = 0;
     gravity();
 }
 //drawing gameObjects
@@ -104,7 +105,7 @@ function gravity()
     {
         player.vy = 2;
         player.y = player.y + player.vy;   
-    }
+    } 
 }
 
 function hitDetection()
