@@ -13,7 +13,7 @@ function update()
     //plat1
     drawRect(plat1.x, plat1.y, plat1.w, plat1.h);
     //plat2
-    testText.innerHTML = grounded;
+    testText.innerHTML = player.x;
     movement();
     player.vy = 0;
     gravity();
