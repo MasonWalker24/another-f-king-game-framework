@@ -79,7 +79,7 @@ function movement()
     {
         if(velocityX < 2)
             {
-                velocityX = velocityX + 0.1;
+                velocityX = velocityX + 0.07;
             }
     }
     if(leftArrowDown)
@@ -88,7 +88,7 @@ function movement()
         {
             if(velocityX > -2)
             {
-                velocityX = velocityX - 0.1;
+                velocityX = velocityX - 0.07;
             }
         }
     }
