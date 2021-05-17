@@ -76,7 +76,7 @@ function movement()
 {
     if(rightArrowDown)
     {
-        if(player.vx < 2)
+        if(player.vx <= 2)
             {
                 player.vx = player.vx + 0.05;
             }
@@ -85,7 +85,7 @@ function movement()
     {
         if(!collideLeft)
         {
-            if(player.vx > -2)
+            if(player.vx >= -2)
             {
                 player.vx = player.vx - 0.05;
             }
