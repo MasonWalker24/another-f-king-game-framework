@@ -39,6 +39,8 @@ function drawPlayer(playerx, playery, radius)
 //movement code
 var rightArrowDown = false;
 var leftArrowDown = false;
+var velocityX
+var velocityY
 document.addEventListener("keydown", detectKey, false);
 document.addEventListener("keyup", detectKeyUp, false);
 
@@ -73,18 +75,22 @@ function movement()
 {
     if(rightArrowDown)
     {
-        if(!collideRight)
-        {
-            player.x = player.x + 2;
-        }
+        if(velocityX < 2)
+            {
+                velocityX = velocityX + 0.2;
+            }
     }
     if(leftArrowDown)
     {
         if(!collideLeft)
         {
-            player.x = player.x - 2;
+            if(velocityX > -2)
+            {
+                velocityX = velocityX - 0.2;
+            }
         }
     }
+    player.x = player.x + velocityX;
 }
 
 //gravity and hit detection
