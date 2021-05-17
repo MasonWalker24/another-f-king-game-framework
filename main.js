@@ -65,10 +65,12 @@ function detectKeyUp(event)
     if(keyCodeUp == 39)
     {
         rightArrowDown = false;
+        velocityX = 0;
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
+        velocityX = 0;
     }
 }
 function movement()
