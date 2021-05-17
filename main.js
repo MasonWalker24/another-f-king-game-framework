@@ -66,13 +66,13 @@ function detectKeyUp(event)
     {
         rightArrowDown = false;
         let counter = 0;
-            let newInt = setInterval(function(){if(player.vx > 0){player.vx = player.vx - 0.1; counter++; if(counter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0;}} else {clearInterval(newInt);}}, 12);
+            let newInt = setInterval(function(){if(player.vx > 0){player.vx = player.vx - 0.05; counter++; if(counter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0;}} else {clearInterval(newInt);}}, 12);
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
         let counter = 0;
-        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.1; counter++; if(counter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0;}} else {clearInterval(newInt);}}, 12);
+        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.05; counter++; if(counter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0;}} else {clearInterval(newInt);}}, 12);
     }
 }
 function movement()
@@ -81,7 +81,7 @@ function movement()
     {
         if(player.vx <= 2)
             {
-                player.vx = player.vx + 0.1;
+                player.vx = player.vx + 0.05;
                 veloXCounter++;
             }
     }
@@ -91,7 +91,7 @@ function movement()
         {
             if(player.vx >= -2)
             {
-                player.vx = player.vx - 0.1;
+                player.vx = player.vx - 0.05;
                 veloXCounter++;
             }
         }
