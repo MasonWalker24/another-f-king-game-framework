@@ -13,7 +13,7 @@ function update()
     //plat1
     drawRect(plat1.x, plat1.y, plat1.w, plat1.h);
     //plat2
-    testText.innerHTML = player.x;
+    testText.innerHTML = player.vx;
     movement();
     player.vy = 0;
     gravity();
@@ -64,12 +64,12 @@ function detectKeyUp(event)
     if(keyCodeUp == 39)
     {
         rightArrowDown = false;
-            let newInt = setInterval(function(){if(player.vx >= 0){player.vx = player.vx - 0.05;} else {clearInterval(newInt);}}, 10);
+            let newInt = setInterval(function(){if(player.vx >= 0){player.vx = player.vx - 0.05;} else {clearInterval(newInt);}}, 12);
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
-        let newInt = setInterval(function(){if(player.vx <= 0){player.vx = player.vx + 0.05;} else {clearInterval(newInt);}}, 10);
+        let newInt = setInterval(function(){if(player.vx <= 0){player.vx = player.vx + 0.05;} else {clearInterval(newInt);}}, 12);
     }
 }
 function movement()
