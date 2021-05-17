@@ -73,7 +73,7 @@ function detectKeyUp(event)
     {
         leftArrowDown = false;
         decelCounter = 0;
-        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.05; decelCounter++; if(decelCounter == veloXCounter){clearInterval(newInt); decelCounter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
+        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.05; decelCounter++; if(decelCounter == veloXCounter - 1){clearInterval(newInt); decelCounter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
     }
 }
 function movement()
