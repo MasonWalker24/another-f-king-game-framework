@@ -64,12 +64,12 @@ function detectKeyUp(event)
     if(keyCodeUp == 39)
     {
         rightArrowDown = false;
-            let newInt = setInterval(function(){if(player.vx > 0.05){player.vx = player.vx - 0.05;} else {clearInterval(newInt);}}, 12);
+            let newInt = setInterval(function(){if(player.vx > 0){player.vx = player.vx - 0.1;} else {clearInterval(newInt);}}, 12);
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
-        let newInt = setInterval(function(){if(player.vx < -0.05){player.vx = player.vx + 0.05;} else {clearInterval(newInt);}}, 12);
+        let newInt = setInterval(function(){if(player.vx < -0){player.vx = player.vx + 0.1;} else {clearInterval(newInt);}}, 12);
     }
 }
 function movement()
@@ -78,7 +78,7 @@ function movement()
     {
         if(player.vx <= 2)
             {
-                player.vx = player.vx + 0.05;
+                player.vx = player.vx + 0.1;
             }
     }
     if(leftArrowDown)
@@ -87,7 +87,7 @@ function movement()
         {
             if(player.vx >= -2)
             {
-                player.vx = player.vx - 0.05;
+                player.vx = player.vx - 0.1;
             }
         }
     }
