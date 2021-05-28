@@ -67,22 +67,22 @@ function detectKeyUp(event)
     {
         rightArrowDown = false;
         decelCounter = 0;
-            let newInt = setInterval(function(){if(player.vx > 0){player.vx = player.vx - 0.05; decelCounter++; if(decelCounter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
+            let newInt = setInterval(function(){if(player.vx > 0){player.vx = player.vx - 1; decelCounter++; if(decelCounter == veloXCounter){clearInterval(newInt); counter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
     }
     if(keyCodeUp == 37)
     {
         leftArrowDown = false;
         decelCounter = 0;
-        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 0.05; decelCounter++; if(decelCounter == veloXCounter - 1){clearInterval(newInt); decelCounter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
+        let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 1; decelCounter++; if(decelCounter == veloXCounter - 1){clearInterval(newInt); decelCounter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
     }
 }
 function movement()
 {
     if(rightArrowDown)
     {
-        if(player.vx <= 2)
+        if(player.vx <= 40)
             {
-                player.vx = player.vx + 0.05;
+                player.vx = player.vx + 1;
                 veloXCounter++;
             }
     }
@@ -90,14 +90,14 @@ function movement()
     {
         if(!collideLeft)
         {
-            if(player.vx >= -2)
+            if(player.vx >= -40)
             {
-                player.vx = player.vx - 0.05;
+                player.vx = player.vx - 1;
                 veloXCounter++;
             }
         }
     }
-    player.x = player.x + player.vx;
+    player.x = player.x + (player.vx/20);
 }
 
 //gravity and hit detection
