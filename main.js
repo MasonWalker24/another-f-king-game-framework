@@ -78,24 +78,15 @@ function detectKeyUp(event)
 }
 function movement()
 {
-    if(rightArrowDown)
+    if(rightArrowDown && player.vx <= 40)
     {
-        if(player.vx <= 40)
-            {
-                player.vx = player.vx + 1;
-                veloXCounter++;
-            }
+        player.vx = player.vx + 1;
+        veloXCounter++;
     }
-    if(leftArrowDown)
+    if(leftArrowDown && !collideLeft && player.vx >= -40)
     {
-        if(!collideLeft)
-        {
-            if(player.vx >= -40)
-            {
-                player.vx = player.vx - 1;
-                veloXCounter++;
-            }
-        }
+        player.vx = player.vx - 1;
+        veloXCounter++;
     }
     player.x = player.x + (player.vx/20);
 }
