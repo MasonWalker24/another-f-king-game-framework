@@ -1,6 +1,6 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var player = {x: 240, y: 160, r: 10, vx: 0, vy: 0};
+var player = {x: 240, y: 160, r: 15, vx: 0, vy: 0};
 var plat1 = {x: 380, y: 260, w: 100, h: 30};
 var testText = document.getElementById("text");
 setInterval(update, 10);
@@ -57,6 +57,10 @@ function detectKey(event)
     {
         leftArrowDown = true;
     }
+    if(keyCode == 38)
+    {
+        upArrowDown = true;
+    }
 }
 
 function detectKeyUp(event)
@@ -74,6 +78,12 @@ function detectKeyUp(event)
         leftArrowDown = false;
         decelCounter = 0;
         let newInt = setInterval(function(){if(player.vx < 0){player.vx = player.vx + 1; decelCounter++; if(decelCounter == veloXCounter - 1){clearInterval(newInt); decelCounter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
+    }
+    if(keyCodeUp == 38)
+    {
+        upArrowDown = false;
+        decelCounter = 0;
+        let newInt = setInterval(function(){if(player.vy < 0){player.vy = player.vx + 1; decelCounter++; if(decelCounter == veloXCounter - 1){clearInterval(newInt); decelCounter = 0; veloXCounter = 0; player.vx = 0;}} else {clearInterval(newInt);}}, 12);
     }
 }
 function movement()
