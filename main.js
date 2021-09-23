@@ -6,5 +6,5 @@ var testText = document.getElementById("text");
 setInterval(update, 10);
 setInterval(hitDetection, 10);
 function update() {
-  play1.test();
+  plat1.test();
 }
