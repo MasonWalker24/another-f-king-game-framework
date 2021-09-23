@@ -4,5 +4,5 @@ document.addEventListener("keydown", setKey, "false");
 function setKey(event)
 {
   input.keyPressed = event.which;
-  setTimeout(function(){input.keyPressed = null;}, 10.000001);
+  setTimeout(function(){input.keyPressed = null;}, 1);
 }
