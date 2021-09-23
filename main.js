@@ -6,5 +6,8 @@ var testText = document.getElementById("text");
 setInterval(update, 10);
 setInterval(hitDetection, 10);
 function update() {
-
+if(input.keyPressed == KeyCode.Space)
+{
+  alert("test");
+}
 }
