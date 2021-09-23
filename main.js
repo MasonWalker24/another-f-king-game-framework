@@ -10,5 +10,5 @@ if(input.keyPressed == KeyCode.Space)
 {
   alert("test");
 }
-  document.getElementById("text").innerHTML = input.pressedKey;
+  document.getElementById("text").innerHTML = input.keyPressed;
 }
